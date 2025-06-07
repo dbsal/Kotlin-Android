@@ -17,3 +17,65 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- tool bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weather"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 실제 메뉴는 Kotlin 코드에서 inflate 해야 합니다. -->
+        <!-- 이미지 뷰 대신 메뉴 아이콘은 툴바 메뉴 리소스로 처리합니다. -->
+        <!-- <ImageView ...> 이 부분은 삭제하거나 주석 처리합니다. -->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:queryHint="Search..."
+        android:textColorHint="#8E8E93"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:drawablePadding="8dp"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:iconifiedByDefault="false"/>
+
+    <!-- 프래그먼트들이 표시될 컨테이너 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

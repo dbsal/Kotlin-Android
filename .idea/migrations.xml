@@ -3,7 +3,11 @@
   <component name="ProjectMigrations">
     <option name="MigrateToGradleLocalJavaHome">
       <set>
+
         <option value="$PROJECT_DIR$/../../../3학년/안드로이드앱개발1/app_test" />
+
+        <option value="$PROJECT_DIR$" />
+
       </set>
     </option>
   </component>
